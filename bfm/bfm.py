@@ -8,7 +8,7 @@ sys.path.append('..')
 
 import os.path as osp
 import numpy as np
-from utils.io import _load
+from ..utils.io import _load
 
 make_abs_path = lambda fn: osp.join(osp.dirname(osp.realpath(__file__)), fn)
 
@@ -31,7 +31,8 @@ class BFMModel(object):
             self.tri = bfm.get('tri')
 
         self.tri = _to_ctype(self.tri.T).astype(np.int32)
-        self.keypoints = bfm.get('keypoints').astype(np.long)  # fix bug
+        # self.keypoints = bfm.get('keypoints').astype(np.long)  # fix bug
+        self.keypoints = bfm.get('keypoints').astype(np.int64)  # fix bug
         w = np.concatenate((self.w_shp, self.w_exp), axis=1)
         self.w_norm = np.linalg.norm(w, axis=0)
 

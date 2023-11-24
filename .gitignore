@@ -32,3 +32,8 @@ test_pr*.py
 demo_for_*.py
 examples/**/zou*
 examples/inputs/videos
+package/TDDFA_V2.egg-info/dependency_links.txt
+package/TDDFA_V2.egg-info/not-zip-safe
+package/TDDFA_V2.egg-info/PKG-INFO
+package/TDDFA_V2.egg-info/SOURCES.txt
+package/TDDFA_V2.egg-info/top_level.txt
